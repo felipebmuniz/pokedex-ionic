@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Pokedex Ionic
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <h1><strong>Pokemons: </strong></h1>
+    </ion-row>
+
+    <ion-row *ngFor="let pokemon of pokemons; let i = index">
+      <ion-item button style="width: 100%;" (click)="showPokemon(i+1)">
+        <h3 [innerText]="pokemon.name"></h3>
+      </ion-item>
+    </ion-row>
+  </ion-grid>
+</ion-content>
